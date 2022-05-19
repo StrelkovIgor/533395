@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "3f364898-0795-426a-bf0d-c61bde296cea",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new product",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "M0Qnlgl5XE7DHkP4nn9Bssqj9LqjbEOhDND8S7RSbgR5jqHX3L1cKRiz8FdvyAlcaeGn3WgTXZHfoMNm",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\" : \"test123\",\r\n\"description\" : \"test123\",\r\n\"price\" : 10.20,\r\n\"article\" : \"DEC125\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product update",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "M0Qnlgl5XE7DHkP4nn9Bssqj9LqjbEOhDND8S7RSbgR5jqHX3L1cKRiz8FdvyAlcaeGn3WgTXZHfoMNm",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\" : \"test123\",\r\n\"description\" : \"test123\",\r\n\"price\" : 10.20,\r\n\"article\" : \"DEC125\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/product/15/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"15",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter and get a sorted list of products",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "M0Qnlgl5XE7DHkP4nn9Bssqj9LqjbEOhDND8S7RSbgR5jqHX3L1cKRiz8FdvyAlcaeGn3WgTXZHfoMNm",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/products?name=name&price_from=10&price_to=100&name_shop=name&date_import=2022-05-31&sort=name&desc=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "name",
+							"description": "Поиск по названию"
+						},
+						{
+							"key": "price_from",
+							"value": "10",
+							"description": "Поиск от суммы"
+						},
+						{
+							"key": "price_to",
+							"value": "100",
+							"description": "Поиск до суммы"
+						},
+						{
+							"key": "name_shop",
+							"value": "name",
+							"description": "Название магазина"
+						},
+						{
+							"key": "date_import",
+							"value": "2022-05-31",
+							"description": "Дата доступа продукта"
+						},
+						{
+							"key": "sort",
+							"value": "name",
+							"description": "Доступно: name, price"
+						},
+						{
+							"key": "desc",
+							"value": "1",
+							"description": "Обратная сортировка"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

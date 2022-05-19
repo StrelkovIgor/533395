@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "e45e4cb0-aa5f-4e74-bf7a-eda5543f0fe7",
+		"name": "shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/shop/1/get_product?name=name&price_from=10&price_to=100&date_import=2022-05-31&sort[]=id&desc[]=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"shop",
+						"1",
+						"get_product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "name",
+							"description": "Поиск по имени"
+						},
+						{
+							"key": "price_from",
+							"value": "10",
+							"description": "Поиск от суммы"
+						},
+						{
+							"key": "price_to",
+							"value": "100",
+							"description": "Поиск до суммы"
+						},
+						{
+							"key": "date_import",
+							"value": "2022-05-31",
+							"description": "Дата доступа продукта"
+						},
+						{
+							"key": "sort[]",
+							"value": "id",
+							"description": "Сортировка по нескольким полям 'id', 'name', 'price'"
+						},
+						{
+							"key": "desc[]",
+							"value": "1",
+							"description": "Обратная сортировка"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
