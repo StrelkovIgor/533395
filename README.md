@@ -5,3 +5,9 @@
 Развертывание:
 
 - Установить [Docker](https://www.docker.com/)
+- Скачать себе проект
+``git clone https://github.com/StrelkovIgor/533395.git``
+- Пройтив директорию ``cd 533395`` и запустить docker окружение ``docker-compose -p 533395 up -d``
+- В директории ``www/back`` нужно скопировать и переименовать ``.env.example`` в ``.env``. Там уже прописаны настройки к базе
+- Осталось запустить миграцию и сид. Для этого нужно зайти в контейнер отвечающий за php ``docker exec -it 533395_backend_1 bash``, после чего выполнить 2 комманды: ``php artisan migrate`` и ``php artisan db:seed``
+- Готова, сервис будет сидеть на 80 порту, а сайт будет доступен по [localhost](http:/localhost/)
